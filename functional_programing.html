@@ -1,0 +1,38 @@
+<script>
+    // i am following this tutorial
+    // https://medium.com/tableless/entendendo-programa%C3%A7%C3%A3o-funcional-em-javascript-de-uma-vez-c676489be08b
+
+    let square = n => n * n;
+
+    const numbers = [1, 2, 3, 4, 5];
+
+    const squared_numbers = numbers.map(square);
+
+    console.log("squared_numbers", squared_numbers);
+
+
+    const students = [
+        { name: 'Anna', grade: 6 },
+        { name: 'John', grade: 4 },
+        { name: 'Maria', grade: 9 }
+    ];
+
+    const teachers = [
+        { name: 'Mark', salary: 2500 },
+        { name: 'Todd', salary: 3700 },
+        { name: 'Angela', salary: 1900 }
+    ];
+
+    get_name = obj => obj["name"];
+
+    const peoples_names = teachers.concat(students).map(get_name);
+
+    console.log("peoples_names:", peoples_names)
+
+
+    const is_smaller_than_4 = n => n < 4
+
+    const numbers_smaller_than_4 = numbers.filter(is_smaller_than_4)
+
+    console.log("numbers_smaller_than_4", numbers_smaller_than_4)
+</script>
